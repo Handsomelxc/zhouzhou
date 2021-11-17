@@ -5,7 +5,7 @@
 int main()
 {
 	int i,sq,sum,a,d,c;
-	int panduan(int x);
+	int panduan(int a);
 	int g,s,b,q;
 
 	
@@ -20,29 +20,26 @@ int main()
          a=panduan(i);
          d=panduan(sum);
          c=panduan(sq);
-         if(a==c&&a==b&&a==1)
+         if(a==1&&d==1&&c==1)
          {
          	printf("%d\n",i);
 		 }
          
     }
 	}
-	int panduan(int x)
-{    int m;
-
-   if(x<=10000){
-   if (x==2)
+int panduan(int a)
+{  if(a<10000)
 {
-	return  1;
-}
-else	for(m=2;m<=sqrt(x);m++)
+
+	int b=2;
+	for(;b<a;b++)
 	{
-		if(x%m==0) 
-		{
-			return 0;
-			break;
-		}
-		else return 1;
-	}
+    if(a%b==0){
+	return 0;
+    break;
+   } }
+if(a==b)
+return 1;
 }
 }
+	
